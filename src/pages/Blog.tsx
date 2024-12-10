@@ -52,6 +52,9 @@ export default Blog;
 
 
 /**
+ Here's an example of what I want to achieve I want the blog to be in .mdx and I want it all in a content directory. 
+  
+ 
  * ---
 title: "Ricing MacOS"
 date: "November 1, 2023"

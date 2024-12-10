@@ -8,10 +8,10 @@ import { ArrowUpRight } from "lucide-react";
 const workExperience = [
   {
     title: "full-stack engineer",
-    company: "dimension",
-    period: "nov 2023 - jan 2024",
+    company: "Gib Casino",
+    period: "nov 2023 - june 2024",
     description:
-      "contributed to a large-scale t3 stack app. worked on real-time presence and chat features",
+      " A complete On-chain community owned Gambling platform backed by azuro ",
   },
   {
     title: "freelance developer",
@@ -24,17 +24,16 @@ const workExperience = [
 
 const projects = [
   {
-    title: "create-t3-app",
-    description:
-      "open-source project for initializing full-stack next.js apps. 24k+ stars, 200+ contributors",
-    link: "https://github.com/username/create-t3-app",
+    title: "paiyou entertainment",
+    description: "A casino gaming platform, users can play and earn ",
+    link: "https://playwallet-hub.vercel.app/",
     tags: ["creator", "maintainer"],
   },
   {
-    title: "mini-git",
-    description: "simplified version of git from scratch",
-    link: "https://github.com/username/mini-git",
-    tags: ["creator"],
+    title: "Gib Casino",
+    description: "Gib Casino is a web3 online sports gambling platform.",
+    link: "https://gib.casino/",
+    tags: ["co-contributor"],
   },
 ];
 
@@ -69,7 +68,7 @@ const commands = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#1A1F2C] text-[#8E9196] font-mono">
+    <div className="min-h-screen bg-[#1A1F2C] text-[#8E9196] font-mono mx-auto">
       <Navigation />
       <main className="container mx-auto px-6 pt-24 pb-12 max-w-3xl">
         <section className="mb-16">
@@ -165,7 +164,7 @@ const Index = () => {
           <h2 className="text-xl font-bold text-[#9b87f5] mb-6 flex items-center gap-2">
             <span className="text-[#F97316]">*</span> links
           </h2>
-          <div className="flex gap-4">
+          <div className="flex gap-4 flex-wrap">
             <a
               href="mailto:amainooti@gmail.com"
               className="text-[#8E9196] hover:text-[#9b87f5]"
