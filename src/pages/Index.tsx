@@ -3,26 +3,30 @@ import { Navigation } from "../components/Navigation";
 import { Terminal } from "../components/Terminal";
 import { WorkExperience } from "../components/WorkExperience";
 import { Projects } from "../components/Projects";
+import { ArrowUpRight } from "lucide-react";
 
 const workExperience = [
   {
     title: "full-stack engineer",
     company: "dimension",
     period: "nov 2023 - jan 2024",
-    description: "contributed to a large-scale t3 stack app. worked on real-time presence and chat features",
+    description:
+      "contributed to a large-scale t3 stack app. worked on real-time presence and chat features",
   },
   {
     title: "freelance developer",
     company: "self-employed",
     period: "2022 - present",
-    description: "worked on various projects using Python, SQL, TypeScript, and Flutter",
+    description:
+      "worked on various projects using Python, SQL, TypeScript, and Flutter",
   },
 ];
 
 const projects = [
   {
     title: "create-t3-app",
-    description: "open-source project for initializing full-stack next.js apps. 24k+ stars, 200+ contributors",
+    description:
+      "open-source project for initializing full-stack next.js apps. 24k+ stars, 200+ contributors",
     link: "https://github.com/username/create-t3-app",
     tags: ["creator", "maintainer"],
   },
@@ -72,17 +76,32 @@ const Index = () => {
           <h1 className="text-3xl font-bold text-[#9b87f5] mb-4">Amaino Oti</h1>
           <div className="glass-panel p-6 space-y-4">
             <p className="text-[#8E9196] leading-relaxed">
-              I'm a software engineer with a diverse background in data engineering and full-stack development. 
-              My expertise spans across multiple technologies including:
+              I'm a software engineer with a diverse background in data
+              engineering and full-stack development. My expertise spans across
+              multiple technologies including:
             </p>
-            <ul className="list-disc list-inside space-y-2 text-[#8E9196]">
-              <li>Python (matplotlib, numpy, pandas, plotly)</li>
-              <li>SQL for data manipulation and analysis</li>
-              <li>TypeScript and Flutter for application development</li>
-              <li>NestJS, React, and FastAPI as primary frameworks</li>
+            <ul className="space-y-2 text-[#8E9196]">
+              <li className="flex items-center">
+                <span className="w-3 h-3 rounded-full bg-[#9b87f5] mr-2"></span>
+                Python (matplotlib, numpy, pandas, plotly)
+              </li>
+              <li className="flex items-center">
+                <span className="w-3 h-3 rounded-full bg-[#9b87f5] mr-2"></span>
+                SQL for data manipulation and analysis
+              </li>
+              <li className="flex items-center">
+                <span className="w-3 h-3 rounded-full bg-[#9b87f5] mr-2"></span>
+                TypeScript and Flutter for application development
+              </li>
+              <li className="flex items-center">
+                <span className="w-3 h-3 rounded-full bg-[#9b87f5] mr-2"></span>
+                NestJS, React, and FastAPI as primary frameworks
+              </li>
             </ul>
             <p className="text-[#8E9196] leading-relaxed">
-              Currently exploring the exciting world of Web3, diving deep into cryptocurrency concepts and learning Solidity for smart contract development.
+              Currently exploring the exciting world of Web3, diving deep into
+              cryptocurrency concepts and learning Solidity for smart contract
+              development.
             </p>
           </div>
         </section>
@@ -103,10 +122,14 @@ const Index = () => {
             <span className="text-[#F97316]">*</span> projects
           </h2>
           <Projects items={projects} />
-          <div className="mt-4">
-            <Link to="/projects" className="text-[#F97316] hover:underline">
-              all projects ↗
+          <div className="mt-4 flex items-center group">
+            <Link
+              to="/projects"
+              className="text-[#F97316] hover:underline transition-colors"
+            >
+              all projects
             </Link>
+            <ArrowUpRight className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </div>
         </section>
 
@@ -127,10 +150,14 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <div className="mt-4">
-            <Link to="/blog" className="text-[#F97316] hover:underline">
-              all posts ↗
+          <div className="mt-4 flex items-center group">
+            <Link
+              to="/blog"
+              className="text-[#F97316] hover:underline transition-colors"
+            >
+              all posts
             </Link>
+            <ArrowUpRight className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </div>
         </section>
 
@@ -139,16 +166,28 @@ const Index = () => {
             <span className="text-[#F97316]">*</span> links
           </h2>
           <div className="flex gap-4">
-            <a href="mailto:email@example.com" className="text-[#8E9196] hover:text-[#9b87f5]">
+            <a
+              href="mailto:amainooti@gmail.com"
+              className="text-[#8E9196] hover:text-[#9b87f5]"
+            >
               email
             </a>
-            <a href="https://x.com/username" className="text-[#8E9196] hover:text-[#9b87f5]">
+            <a
+              href="https://x.com/AmainoOti"
+              className="text-[#8E9196] hover:text-[#9b87f5]"
+            >
               x.com
             </a>
-            <a href="https://github.com/username" className="text-[#8E9196] hover:text-[#9b87f5]">
+            <a
+              href="https://github.com/amainooti"
+              className="text-[#8E9196] hover:text-[#9b87f5]"
+            >
               github
             </a>
-            <a href="https://linkedin.com/in/username" className="text-[#8E9196] hover:text-[#9b87f5]">
+            <a
+              href="https://linkedin.com/in/username"
+              className="text-[#8E9196] hover:text-[#9b87f5]"
+            >
               linkedin
             </a>
             <a href="/calendar" className="text-[#8E9196] hover:text-[#9b87f5]">
