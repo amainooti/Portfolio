@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import RicingMacOS from "./pages/blog/RicingMacOS";
 import FutureOfAI from "./pages/blog/FutureOfAI";
-import Projects from "./pages/Projects";
+import ProjectsPage from "./pages/Projects";
 
 const queryClient = new QueryClient();
 
@@ -20,7 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/blog/ricing-macos" element={<RicingMacOS />} />
           <Route path="/blog/future-of-ai" element={<FutureOfAI />} />
         </Routes>
