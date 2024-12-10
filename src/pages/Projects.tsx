@@ -7,7 +7,7 @@ const projects = [
     description:
       " A complete On-chain community owned Gambling platform backed by azuro",
     link: "https://gib.casino/",
-    tags: ["typescript", "next.js", "graphGQ", "tailwind css", "web3.js"],
+    tags: ["typescript", "next.js", "graphQL", "tailwind css", "web3.js"],
   },
   {
     title: "portfolio",
