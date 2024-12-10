@@ -54,7 +54,7 @@ const blogPosts = [
     link: "/blog/how-i-organize-my-life",
   },
   {
-    title: "why i switched from neovim to vscode",
+    title: "why i switched from neovim to vscode and back to vscode?",
     date: "jun 23, 2023",
     link: "/blog/neovim-to-vscode",
   },

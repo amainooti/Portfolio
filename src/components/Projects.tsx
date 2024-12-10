@@ -13,31 +13,30 @@ interface ProjectsProps {
 
 export const Projects: React.FC<ProjectsProps> = ({ items }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
       {items.map((project, index) => (
         <a
           href={project.link}
           key={index}
-          className="glass-panel p-6 hover:bg-terminal-highlight/40 transition-colors duration-200 animate-fadeIn"
-          style={{ animationDelay: `${index * 100}ms` }}
+          className="block glass-panel p-6 transition-all duration-300 hover:scale-[1.02] relative before:absolute before:inset-0 before:rounded-lg before:border-2 before:border-[#F97316] before:scale-[1.02] before:opacity-0 hover:before:opacity-100 before:transition-all"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h3 className="text-terminal-accent font-bold mb-2">
-            {project.title}
-          </h3>
-          <p className="text-terminal-text/80 text-sm mb-4">
-            {project.description}
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag, tagIndex) => (
-              <span
-                key={tagIndex}
-                className="px-2 py-1 text-xs rounded-full bg-terminal-secondary/30 text-terminal-text/70"
-              >
-                {tag}
-              </span>
-            ))}
+          <div className="space-y-4">
+            <h3 className="text-[#9b87f5] text-xl font-bold hover:underline">
+              {project.title}
+            </h3>
+            <p className="text-terminal-text/90">{project.description}</p>
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((tag, tagIndex) => (
+                <span
+                  key={tagIndex}
+                  className="text-[#F97316] text-sm bg-[#F97316]/10 px-2 py-1 rounded"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </a>
       ))}

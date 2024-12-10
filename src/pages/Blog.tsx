@@ -51,30 +51,4 @@ const Blog = () => {
 export default Blog;
 
 
-/**
- Here's an example of what I want to achieve I want the blog to be in .mdx and I want it all in a content directory. 
-  
- 
- * ---
-title: "Ricing MacOS"
-date: "November 1, 2023"
----
 
-Recently a screenshot of my MacOS rice blew up on X (formerly Twitter), eventually becoming my most liked post of all time. In this post, I'll break down my setup and share the tools and configurations I use to achieve this minimal, productive environment.
-
-## The Terminal Setup
-
-At the heart of my setup is iTerm2 with a custom color scheme that matches my overall theme. I use the JetBrains Mono font for its excellent readability and ligature support.
-
-## Window Management
-
-For window management, I use Yabai, a tiling window manager for macOS. It allows me to control window placement and sizing with keyboard shortcuts, creating a more efficient workflow.
-
-```bash
-# Example Yabai configuration
-yabai -m config layout bsp
-yabai -m config window_placement second_child
-yabai -m config split_ratio 0.50
-
- * 
- */

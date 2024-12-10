@@ -4,13 +4,13 @@ import path from "path";
 import mdx from "@mdx-js/rollup";
 
 export default defineConfig({
-  plugins: [
-    mdx(),
-    react(),
-  ],
+  plugins: [mdx(), react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  server: {
+    port: 8080,
   },
 });
