@@ -72,7 +72,9 @@ const Index = () => {
       <Navigation />
       <main className="container mx-auto px-6 pt-24 pb-12 max-w-3xl">
         <section className="mb-16">
-          <h1 className="text-3xl font-bold text-[#9b87f5] mb-4">Amaino Oti</h1>
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#9b87f5] dark:text-[#6a4bc5] mb-2 sm:mb-3 md:mb-4">
+            Amaino Oti
+          </h1>
           <div className="glass-panel p-6 space-y-4">
             <p className="text-[#8E9196] leading-relaxed">
               I'm a software engineer with a diverse background in data

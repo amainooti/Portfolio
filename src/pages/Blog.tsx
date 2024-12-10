@@ -9,9 +9,11 @@ const Blog = () => {
     <div className="min-h-screen bg-terminal-bg">
       <Navigation />
       <main className="container mx-auto px-4 sm:px-6 pt-24 pb-12">
-        <h1 className="text-2xl sm:text-3xl font-bold text-[#9b87f5] mb-8">Blog Posts</h1>
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#9b87f5] dark:text-[#6a4bc5] mb-2 sm:mb-3 md:mb-4">
+          <span className="text-[#F97316]">*</span> Blogs
+        </h1>
         <div className="grid gap-6">
-          <article 
+          <article
             onClick={() => navigate("/blog/ricing-macos")}
             className="glass-panel p-4 sm:p-6 animate-fadeIn group cursor-pointer hover:bg-terminal-highlight/40 transition-colors duration-200"
           >
@@ -20,14 +22,17 @@ const Blog = () => {
                 Ricing MacOS
                 <ArrowUpRight className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform duration-200" />
               </h2>
-              <span className="text-sm text-terminal-text/70">November 1, 2023</span>
+              <span className="text-sm text-terminal-text/70">
+                November 1, 2023
+              </span>
             </div>
             <p className="text-terminal-text/80">
-              Recently a screenshot of my MacOS rice blew up on X (formerly Twitter), eventually becoming my most liked post of all time.
+              Recently a screenshot of my MacOS rice blew up on X (formerly
+              Twitter), eventually becoming my most liked post of all time.
             </p>
           </article>
-          
-          <article 
+
+          <article
             onClick={() => navigate("/blog/future-of-ai")}
             className="glass-panel p-4 sm:p-6 animate-fadeIn group cursor-pointer hover:bg-terminal-highlight/40 transition-colors duration-200"
           >
@@ -39,7 +44,8 @@ const Blog = () => {
               <span className="text-sm text-terminal-text/70">2024-01-10</span>
             </div>
             <p className="text-terminal-text/80">
-              How artificial intelligence is transforming the way we write code...
+              How artificial intelligence is transforming the way we write
+              code...
             </p>
           </article>
         </div>
@@ -49,6 +55,3 @@ const Blog = () => {
 };
 
 export default Blog;
-
-
-
