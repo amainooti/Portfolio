@@ -22,18 +22,20 @@ export default {
         mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         terminal: {
+          orange: "#F97316",
+          gray: "#6B7280",
           bg: "#1a1b26",
           text: "#a9b1d6",
           accent: "#7aa2f7",
           secondary: "#414868",
           highlight: "#292e42",
         },
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -64,6 +66,18 @@ export default {
         },
       },
       keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
         blink: {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0" },
@@ -74,28 +88,28 @@ export default {
         },
       },
       animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.6s ease-out forwards",
         blink: "blink 1s step-start infinite",
         fadeIn: "fadeIn 0.5s ease-out forwards",
       },
       typography: {
         DEFAULT: {
           css: {
-            maxWidth: 'none',
-            color: '#a9b1d6',
-            '--tw-prose-headings': '#9b87f5',
-            '--tw-prose-links': '#9b87f5',
-            '--tw-prose-code': '#9b87f5',
+            maxWidth: "none",
+            color: "#a9b1d6",
+            "--tw-prose-headings": "#9b87f5",
+            "--tw-prose-links": "#9b87f5",
+            "--tw-prose-code": "#9b87f5",
             pre: {
-              backgroundColor: 'rgba(41, 46, 66, 0.3)',
-              borderColor: 'rgba(65, 72, 104, 0.2)',
+              backgroundColor: "rgba(41, 46, 66, 0.3)",
+              borderColor: "rgba(65, 72, 104, 0.2)",
             },
           },
         },
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("@tailwindcss/typography")
-  ],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
