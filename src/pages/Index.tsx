@@ -29,12 +29,16 @@ const projects = [
     description: "A casino gaming platform, users can play and earn ",
     link: "https://playwallet-hub.vercel.app/",
     tags: ["creator", "maintainer"],
+    status: "done" as const,
+    language: "TypeScript",
   },
   {
     title: "Gib Casino",
     description: "Gib Casino is a web3 online sports gambling platform.",
     link: "https://gib.casino/",
     tags: ["co-contributor"],
+    status: "done" as const,
+    language: "TypeScript",
   },
 ];
 

@@ -1,9 +1,48 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Terminal, X } from "lucide-react";
+import { useToast } from "../hooks/use-toast";
 
 export const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.shiftKey) {
+        switch (event.key.toLowerCase()) {
+          case "h":
+            event.preventDefault();
+            navigate("/");
+            toast({
+              description: "Navigated to Home",
+              duration: 2000,
+            });
+            break;
+          case "b":
+            event.preventDefault();
+            navigate("/blog");
+            toast({
+              description: "Navigated to Blog",
+              duration: 2000,
+            });
+            break;
+          case "p":
+            event.preventDefault();
+            navigate("/projects");
+            toast({
+              description: "Navigated to Projects",
+              duration: 2000,
+            });
+            break;
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, [navigate, toast]);
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-terminal-bg/80 backdrop-blur-sm border-b border-terminal-secondary/20">
