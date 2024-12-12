@@ -45,7 +45,7 @@ const projects = [
     description: "AI learning platform that promotes community.",
     link: "https://bland-ai-landing.vercel.app/",
     tags: ["co-contributor"],
-    status: "done" as const,
+    status: "ongoing" as const,
     language: "TypeScript",
   },
 ];
