@@ -40,6 +40,14 @@ const projects = [
     status: "done" as const,
     language: "TypeScript",
   },
+  {
+    title: "Bland AI",
+    description: "AI learning platform that promotes community.",
+    link: "https://bland-ai-landing.vercel.app/",
+    tags: ["co-contributor"],
+    status: "done" as const,
+    language: "TypeScript",
+  },
 ];
 
 const blogPosts = [
@@ -85,38 +93,26 @@ const Index = () => {
           content="portfolio, Amaino Oti, home, software engineering"
         />
       </Helmet>
-      <div className="min-h-screen bg-[#1A1F2C] text-[#8E9196] font-mono mx-auto">
+      <div className="min-h-screen bg-[#1A1F2C] text-[#8E9196] font-mono">
         <Navigation />
-        <main className="container mx-auto px-6 pt-24 pb-12 max-w-3xl">
-          <section className="mb-16">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#9b87f5] dark:text-[#6a4bc5] mb-2 sm:mb-3 md:mb-4">
+        <main className="container mx-auto px-4 sm:px-6 pt-24 pb-12 max-w-4xl">
+          <section className="mb-12 sm:mb-16">
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#9b87f5] mb-4">
               Amaino Oti
             </h1>
-            <div className="glass-panel p-6 space-y-4">
-              <p className="text-[#8E9196] leading-relaxed">
+            <div className="glass-panel p-4 sm:p-6 space-y-4">
+              <p className="text-[#8E9196] leading-relaxed text-sm sm:text-base">
                 I'm a software engineer with a diverse background in data
                 engineering and full-stack development. My expertise spans
                 across multiple technologies including:
               </p>
-              <ul className="space-y-2 text-[#8E9196]">
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-[#9b87f5] mr-2"></span>
-                  Python (matplotlib, numpy, pandas, plotly)
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-[#9b87f5] mr-2"></span>
-                  SQL for data manipulation and analysis
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-[#9b87f5] mr-2"></span>
-                  TypeScript and Flutter for application development
-                </li>
-                <li className="flex items-center">
-                  <span className="w-3 h-3 rounded-full bg-[#9b87f5] mr-2"></span>
-                  NestJS, React, and FastAPI as primary frameworks
-                </li>
+              <ul className="list-disc list-inside space-y-2 text-[#8E9196] text-sm sm:text-base">
+                <li>Python (matplotlib, numpy, pandas, plotly)</li>
+                <li>SQL for data manipulation and analysis</li>
+                <li>TypeScript and Flutter for application development</li>
+                <li>NestJS, React, and FastAPI as primary frameworks</li>
               </ul>
-              <p className="text-[#8E9196] leading-relaxed">
+              <p className="text-[#8E9196] leading-relaxed text-sm sm:text-base">
                 Currently exploring the exciting world of Web3, diving deep into
                 cryptocurrency concepts and learning Solidity for smart contract
                 development.
@@ -124,19 +120,19 @@ const Index = () => {
             </div>
           </section>
 
-          <section className="mb-16">
+          <section className="mb-12 sm:mb-16">
             <Terminal commands={commands} />
           </section>
 
-          <section className="mb-16">
-            <h2 className="text-xl font-bold text-[#9b87f5] mb-6 flex items-center gap-2">
+          <section className="mb-12 sm:mb-16">
+            <h2 className="text-lg sm:text-xl font-bold text-[#9b87f5] mb-6 flex items-center gap-2">
               <span className="text-[#F97316]">*</span> work
             </h2>
             <WorkExperience items={workExperience} />
           </section>
 
-          <section className="mb-16">
-            <h2 className="text-xl font-bold text-[#9b87f5] mb-6 flex items-center gap-2">
+          <section className="mb-12 sm:mb-16">
+            <h2 className="text-lg sm:text-xl font-bold text-[#9b87f5] mb-6 flex items-center gap-2">
               <span className="text-[#F97316]">*</span> projects
             </h2>
             <Projects items={projects} />
@@ -151,20 +147,25 @@ const Index = () => {
             </div>
           </section>
 
-          <section className="mb-16">
-            <h2 className="text-xl font-bold text-[#9b87f5] mb-6 flex items-center gap-2">
+          <section className="mb-12 sm:mb-16">
+            <h2 className="text-lg sm:text-xl font-bold text-[#9b87f5] mb-6 flex items-center gap-2">
               <span className="text-[#F97316]">*</span> blog
             </h2>
             <div className="space-y-4">
               {blogPosts.map((post, index) => (
-                <div key={index} className="flex justify-between items-center">
+                <div
+                  key={index}
+                  className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2"
+                >
                   <Link
                     to={post.link}
-                    className="text-[#8E9196] hover:text-[#9b87f5] transition-colors"
+                    className="text-[#8E9196] hover:text-[#9b87f5] transition-colors text-sm sm:text-base"
                   >
                     {post.title}
                   </Link>
-                  <span className="text-[#6E59A5] text-sm">{post.date}</span>
+                  <span className="text-[#6E59A5] text-xs sm:text-sm">
+                    {post.date}
+                  </span>
                 </div>
               ))}
             </div>
@@ -179,25 +180,25 @@ const Index = () => {
             </div>
           </section>
 
-          <section className="mb-16">
-            <h2 className="text-xl font-bold text-[#9b87f5] mb-6 flex items-center gap-2">
+          <section className="mb-12 sm:mb-16">
+            <h2 className="text-lg sm:text-xl font-bold text-[#9b87f5] mb-6 flex items-center gap-2">
               <span className="text-[#F97316]">*</span> links
             </h2>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex flex-wrap gap-4 text-sm sm:text-base">
               <a
-                href="mailto:amainooti@gmail.com"
+                href="mailto:email@example.com"
                 className="text-[#8E9196] hover:text-[#9b87f5]"
               >
                 email
               </a>
               <a
-                href="https://x.com/AmainoOti"
+                href="https://x.com/username"
                 className="text-[#8E9196] hover:text-[#9b87f5]"
               >
                 x.com
               </a>
               <a
-                href="https://github.com/amainooti"
+                href="https://github.com/username"
                 className="text-[#8E9196] hover:text-[#9b87f5]"
               >
                 github
