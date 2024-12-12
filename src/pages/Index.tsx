@@ -186,31 +186,41 @@ const Index = () => {
             </h2>
             <div className="flex flex-wrap gap-4 text-sm sm:text-base">
               <a
-                href="mailto:email@example.com"
+                href="mailto:amainooti@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#8E9196] hover:text-[#9b87f5]"
               >
                 email
               </a>
               <a
-                href="https://x.com/username"
+                href="https://x.com/amainooti"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#8E9196] hover:text-[#9b87f5]"
               >
                 x.com
               </a>
               <a
-                href="https://github.com/username"
+                href="https://github.com/amainooti"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#8E9196] hover:text-[#9b87f5]"
               >
                 github
               </a>
               <a
-                href="https://linkedin.com/in/username"
+                href="https://www.linkedin.com/in/oti-amaino-3878b81a9/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#8E9196] hover:text-[#9b87f5]"
               >
                 linkedin
               </a>
               <a
-                href="/calendar"
+                href="https://calendly.com/amainooti"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#8E9196] hover:text-[#9b87f5]"
               >
                 book a call

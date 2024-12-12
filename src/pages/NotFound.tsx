@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-// text-[#9b87f5] dark:text-[#6a4bc5]
 const NotFound = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <div className="text-center space-y-8 animate-fade-in">
@@ -17,12 +18,12 @@ const NotFound = () => {
           <p className="text-terminal-gray text-sm sm:text-base">
             "In the digital wilderness, even pixels get lost sometimes"{" "}
           </p>
-          <Link
-            to="/"
+          <button
+            onClick={() => navigate(-1)}
             className="inline-block text-terminal-gray text-sm sm:text-base hover:text-[#9b87f5] transition-colors duration-300"
           >
             return home
-          </Link>
+          </button>
         </div>
       </div>
     </div>
