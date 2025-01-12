@@ -63,6 +63,26 @@ const Blog = () => {
                 code...
               </p>
             </article>
+
+            <article
+              onClick={() => navigate("/blog/ethereum")}
+              className="glass-panel p-4 sm:p-6 animate-fadeIn group cursor-pointer hover:bg-terminal-highlight/40 transition-colors duration-200"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <h2 className="text-lg sm:text-xl font-bold text-[#9b87f5] group-hover:text-terminal-text transition-colors duration-200 flex items-center gap-2">
+                  Exploring Ethereum
+                  <ArrowUpRight className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform duration-200" />
+                </h2>
+                <span className="text-sm text-terminal-text/70">
+                  January 11, 2025
+                </span>
+              </div>
+              <p className="text-terminal-text/80">
+                This series I'll be exploring Ethereum from the ground up and
+                I'll be assuming you have some knowledge of programming in order
+                to follow this...
+              </p>
+            </article>
           </div>
         </main>
       </div>

@@ -10,6 +10,7 @@ import RicingMacOS from "./pages/blog/RicingMacOS";
 import FutureOfAI from "./pages/blog/FutureOfAI";
 import ProjectsPage from "./pages/Projects";
 import NotFound from "./pages/NotFound";
+import Ethereum from "./pages/blog/Ethereum";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/blog/ricing-macos" element={<RicingMacOS />} />
             <Route path="/blog/future-of-ai" element={<FutureOfAI />} />
+            <Route path="/blog/ethereum" element={<Ethereum />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
